@@ -1,0 +1,1 @@
+# SimpleSocialProject Created by Django
