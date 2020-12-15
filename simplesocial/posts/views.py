@@ -1,6 +1,6 @@
 # Create your views here.
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.url import reverse_lazy
+from django.urls import reverse_lazy
 
 from django.http import Http404
 from django.views import generic
@@ -35,7 +35,7 @@ class UserPosts(generic.ListView):
         return context
 
 class PostDetail(SelectRelatedMixin, generic.DetailView):
-    model = mdoels.Post
+    model = models.Post
     select_related = ('user', 'group')
 
     def get_queryset(self):
